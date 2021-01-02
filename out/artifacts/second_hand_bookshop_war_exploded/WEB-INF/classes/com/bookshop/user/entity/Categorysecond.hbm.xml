@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.bookshop.user.entity.Categorysecond" table="s_categorysecond" schema="second-hand bookshop">
+        <id name="categorySecondId">
+            <column name="categorySecondId" sql-type="int(11)"/>
+        </id>
+        <property name="categorySecondName" >
+            <column name="categorySecondName" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
+        <many-to-one name="category" class="com.bookshop.user.entity.Category" column="categoryId">
+
+        </many-to-one>
+      
+    </class>
+</hibernate-mapping>

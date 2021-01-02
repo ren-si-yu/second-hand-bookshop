@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true"></constant>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+    <constant name="struts.i18n.encoding" value="utf-8"></constant>
+    <!--    <constant name="struts.objectFactory" value="spring"/>-->
+    <!--可有可无吧-->
+
+    <package name="default" extends="struts-default" namespace="/">
+
+        <!-- 为类中的方法配置映射 -->
+        <!-- 配置拦截器AuthorityInterceptor -->
+        <interceptors>
+            <interceptor name="loginCheck" class="com.bookshop.user.interceptor.UserInterceptor"/>
+        </interceptors>
+        <!-- 设置全局的返回值,返回首页-->
+        <global-results>
+            <result name="loginSuccess" type="redirectAction">index</result>
+            <result name="input">globalInput.jsp</result>
+            <result name="404">/error/NotFound.jsp</result>
+            <result name="*">/noResult.jsp</result>
+        </global-results>
+
+
+        <action name="admin_*" class="adminAction" method="{1}">
+            <!--admin-->
+            <result name="admin_index">/WEB-INF/admin/AdminIndex.jsp</result>
+            <result name="admin_login">/WEB-INF/admin/login.jsp</result>
+            <result name="redirect" type="redirect">admin_redirct</result>
+            <result name="redirectindex">/WEB-INF/admin/AdminIndex.jsp</result>
+            <!--login-->
+
+            <!--searchUser-->
+            <result name="searchUser">/WEB-INF/admin/AdminUser.jsp</result>
+            <!--searchSeller-->
+            <result name="searchSeller">/WEB-INF/admin/AdminSeller.jsp</result>
+            <!--selectBook-->
+            <result name="selectBook">/WEB-INF/admin/AdminSelectBook.jsp</result>
+            <result name="deleteBook">/WEB-INF/admin/AdminDeleteBook.jsp</result>
+
+
+            <!--userCashOut-->
+            <result name="userCashOut">/WEB-INF/admin/AdminUserCashOut.jsp</result>
+
+            <!--order-->
+            <result name="order0">/WEB-INF/admin/adminorder0.jsp</result>
+            <result name="order1">/WEB-INF/admin/adminorder1.jsp</result>
+            <result name="order2">/WEB-INF/admin/adminorder2.jsp</result>
+            <!--freeze-->
+            <result name="freeze" type="chain">admin_searchUser</result>
+
+            <!--sureWithdraw-->
+            <result name="sureWithdraw" type="chain">admin_userCashOut</result>
+
+            <!--loginOut-->
+            <result name="loginOut">/WEB-INF/admin/login.jsp</result>
+
+            <result name="input">/WEB-INF/admin/adminInput.jsp</result>
+            <allowed-methods>
+                admin,login,searchSeller,searchUser,selectBook,userCashOut,order,freeze,redirect,sureWithdraw,loginOut
+            </allowed-methods>
+        </action>
+
+
+        <!--入口-->
+        <action name="index*" class="indexAction" method="{1}">
+            <result type="chain">page_getBookPage</result>
+            <result name="GetBuyCategories" type="chain">page_getBookPage</result>
+            <allowed-methods>GetBuyCategories,execute</allowed-methods>
+        </action>
+
+        <!--分页-->
+        <action name="page_*" class="pageAction" method="{1}">
+            <result name="getBookPage">Index.jsp</result>
+            <result name="getBuyBookPage">buy.jsp</result>
+            <allowed-methods>getBookPage,getBuyBookPage</allowed-methods>
+        </action>
+
+
+        <!--发送email邮件验证码注册    发送验证码修改密码  sendEmailToRegister-->
+        <action name="sendEmailRegister" class="sendEmailAction" method="ToRegister">
+            <result name="sendEmailToRegisterFailure">NotFound.jsp</result>
+            <!--<result name="sendEmailToRegisterSuccess"></result>-->
+            <result name="emailExist">Register.jsp</result>
+        </action>
+        <action name="sendEmailFindPwd" class="sendEmailAction" method="ToFindPwd">
+            <result name="emailNotExist">Forget1.jsp</result>
+            <result name="sendToFindPwdFailure">NotFound.jsp</result>
+            <result name="sendToFindPwdSuccess">Forget2.jsp</result>
+        </action>
+
+
+        <!--登录 注册 登出  个人中心 提现 user_loginOut  user_login   user_register-->
+        <action name="user_*" class="doAction" method="{1}">
+            <result name="registerSuccess">/user/registerSuccess.jsp</result>
+            <result name="registerError">/Register.jsp</result>
+            <result name="input">input.jsp</result>
+            <result name="loginError">Login.jsp</result>
+            <result name="loginOut">Login.jsp</result>
+            <result name="withdraw">withdraw.jsp</result>
+            <result name="personCenter">user/PersonCenter.jsp</result>
+            <result name="altPersonCenter" type="chain">user_personCenter</result>
+            <allowed-methods>login,register,loginOut,personCenter,withdraw,altPersonCenter</allowed-methods>
+        </action>
+
+
+        <!--验证密码   修改密码-->
+        <action name="alterPwd_*" class="alterPwdAction" method="{1}">
+            <result name="checkSuccess">Forget3.jsp</result>
+            <result name="checkFailure">Forget2.jsp</result>
+            <result name="alterSuccess">Forget4.jsp</result>
+
+            <!--###################-->
+
+            <allowed-methods>alterPwd,checkout</allowed-methods>
+            <!--###################-->
+            <!--<result name="alterFailure"></result>-->
+        </action>
+
+
+        <!--对seller操作-->
+        <!--seller_sellBook-->
+        <action name="seller_*" class="sellerAction" method="{1}">
+            <!--如果有卖家信息，接着获取卖家的图书-->
+            <result name="checkOk" type="chain">seller_getMyBook</result>
+            <result name="checkFailure">SellerInformation.jsp</result>
+            <result name="setSellerSuccess">user/setSellerSuccess.jsp</result>
+            <result name="setFailure">setFailure.jsp</result>
+            <result name="getCategory">SellBook1.jsp</result>
+            <result name="getBookSuccess">SellBook.jsp</result>
+            <result name="getMyBookByStatus">SellBook.jsp</result>
+
+            <result name="input">input.jsp</result>
+            <allowed-methods>checkSeller,addSeller,sellBook,getMyBook,getMyBookByStatus</allowed-methods>
+        </action>
+
+
+        <!--对book操作-->
+        <action name="book_*" class="bookAction" method="{1}">
+            <interceptor-ref name="fileUpload">
+                <param name="allowedTypes">image/bmp,image/png,image/gif,image/jpeg</param>
+                <param name="allowedExtensions">png,jpg,gif</param>
+                <!-- 文件大小, 以字节为单位  最大一兆-->
+                <param name="maximumSize">10259560</param>
+            </interceptor-ref>
+            <!-- 默认拦截器必须放在fileUpload之后，否则无效 -->
+            <interceptor-ref name="defaultStack"/>
+
+            <result>/user/addBookSuccess.jsp</result>
+            <!--不能加.action-->
+            <result name="offShelfBooksSuccess" type="chain">seller_checkSeller</result>
+            <result name="onShelfBooksSuccess" type="chain">seller_checkSeller</result>
+            <result name="searchByType">buy.jsp</result>
+            <result name="deleteBook" type="chain">seller_getMyBook</result>
+
+            <!--##################################-->
+            <allowed-methods>addBook,offShelfBook,deleteBook,onShelfBook,searchByType</allowed-methods>
+            <!--##################################-->
+
+        </action>
+
+        <!--买书界面  订单-->
+        <action name="buy_*" class="buyAction" method="{1}">
+            <result name="detail">Detail.jsp</result>
+            <result name="showCarts">BuyCar.jsp</result>
+            <result name="addCarts" type="chain">buy_showCarts</result>
+            <result name="removeCarts" type="chain">buy_showCarts</result>
+            <result name="addOrder">pay.jsp</result>
+            <result name="paySuccess">paySuccess.jsp</result>
+            <result name="addOrderNum">addOrderNum.jsp</result>
+            <result name="searchOrder">Order.jsp</result>
+            <result name="fahuo">fahuo.jsp</result>
+            <result name="buySuccess" type="chain">buy_searchOrder</result>
+
+
+            <allowed-methods>detail,showCarts,addCarts,removeCarts,addOrder,addOrderNum,searchOrder,fahuo,success
+            </allowed-methods>
+        </action>
+
+        <action name="address_*" class="addressAction" method="{1}">
+            <result name="addAddress" type="chain">address_searchAddress</result>
+            <result name="searchAddress">Address.jsp</result>
+            <result name="firstAddress">Address.jsp</result>
+            <result name="delAddress">Address.jsp</result>
+            <result name="updateAddress">Address.jsp</result>
+            <allowed-methods>addAddress,searchAddress,delAddress,updateAddress</allowed-methods>
+        </action>
+
+
+        <action name="test" class="com.bookshop.user.action.testAction">
+            <result>upbook.jsp</result>
+        </action>
+
+
+        <!--404页面-->
+        <action name="*">
+            <result>/error/NotFound.jsp</result>
+        </action>
+
+    </package>
+</struts>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.bookshop.user.entity.Carts" table="s_carts">
+        <id name="cartId">
+            <column name="cartId"></column>
+            <generator class="native"></generator>
+        </id>
+        <property name="currentPrice"></property>
+        <property name="sellerEmail"></property>
+        <property name="bookName"></property>
+        <property name="number"></property>
+        <property name="loginEmail"></property>
+        <property name="bookImg"></property>
+    </class>
+
+
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+.Register{
+    width: 550px;
+    height: 400px;
+    background-color: whitesmoke;
+    display: block;
+    text-align: center;
+    margin-left: 55%;
+    margin-top:3%;
+    padding-top:20px;
+}
+img {
+    height: 200px;
+    width: 200px
+}

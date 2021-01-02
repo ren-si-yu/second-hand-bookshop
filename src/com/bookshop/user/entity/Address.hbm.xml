@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.bookshop.user.entity.Address" table="s_address" schema="second-hand bookshop">
+        <id name="id">
+            <generator class="native"></generator>
+        </id>
+        <property name="loginEmail"></property>
+        <property name="zipCode"></property>
+        <property name="userAddress"></property>
+        <property name="userPhone"></property>
+        <property name="userName"></property>
+        <property name="first"></property>
+    </class>
+
+</hibernate-mapping>

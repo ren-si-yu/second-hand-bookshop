@@ -1,0 +1,25 @@
+
+
+a, img {
+    border: 0;
+}
+
+
+a, a:hover {
+    text-decoration: none;
+    color: #666;
+}
+
+.demo {
+    width: 300px;
+
+
+}
+
+/* select */
+.select {
+    position: relative;
+    float: left;
+    margin: 0 10px;
+    width: 130px;
+}

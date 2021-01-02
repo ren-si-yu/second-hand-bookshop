@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.bookshop.user.entity.Books" table="s_books" schema="second-hand bookshop">
+        <id name="id">
+            <generator class="native"></generator>
+        </id>
+        <property name="bookId"></property>
+        <property name="bookName">
+            <column name="bookName" not-null="true"/>
+        </property>
+        <property name="bookImg">
+            <column name="bookImg" not-null="true" default="https://rain-bucket.oss-cn-beijing.aliyuncs.com/Snipaste_2019-06-01_13-53-29.png
+?x-oss-process=style/one"/>
+        </property>
+        <property name="marketPrice">
+            <column name="marketPrice" precision="11" scale="2"/>
+        </property>
+        <property name="currentPrice">
+            <column name="currentPrice" precision="11" scale="2"></column>
+        </property>
+        <property name="bookStock">
+            <column name="bookStock"/>
+        </property>
+        <property name="status">
+            <column name="status"/>
+        </property>
+        <property name="bookDesc">
+            <column name="bookDesc"/>
+        </property>
+
+        <property name="createTime">
+            <column name="createTime" not-null="true"/>
+        </property>
+        <property name="bookshelfAddress">
+            <column name="bookshelfAddress" not-null="true"/>
+        </property>
+        <property name="typeNo1">
+            <column name="typeNo1"/>
+        </property>
+        <property name="publishDate">
+            <column name="publishDate"/>
+        </property>
+        <property name="author">
+            <column name="author"/>
+        </property>
+        <property name="page">
+            <column name="page"/>
+        </property>
+        <property name="isbn">
+            <column name="ISBN"/>
+        </property>
+        <property name="bookPress">
+            <column name="bookPress"/>
+        </property>
+        <property name="sellerEmail"></property>
+
+    </class>
+</hibernate-mapping>

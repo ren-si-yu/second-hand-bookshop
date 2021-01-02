@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="second-hand bookshop:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e406bf40-23b3-42ff-bebf-8ec5ead751f8" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc:mysql://localhost:3306/second-hand bookshop" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc:mysql://localhost:3306/second-hand bookshop" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc:mysql://localhost:3306/second-hand bookshop" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="second-hand bookshop: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc:mysql://localhost:3306/second-hand bookshop" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="second-hand bookshop: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="s_categorysecond: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="second-hand bookshop" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="struts" />
+        <option value="spring-beans.schema" />
+        <option value="HTML File" />
+        <option value="package-info" />
+        <option value="Class" />
+        <option value="xxx.hbm.xml" />
+        <option value="Jsp File" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>row</find>
+      <find>0f0f0f</find>
+      <find>type</find>
+      <find>搜索</find>
+      <find>bookPage</find>
+      <find>bookDetail</find>
+      <find>add</find>
+      <find>bookNum</find>
+      <find>findCartByEmail</find>
+      <find>购物车</find>
+      <find>..</find>
+      <find>user_personCenter</find>
+      <find>${pageContext}</find>
+      <find>已售出</find>
+      <find>findBookByEmail</find>
+      <find>WIDout_trade_no</find>
+      <find>buyAc</find>
+      <find>个人</find>
+      <find>zipcode</find>
+      <find>Index'</find>
+      <find>buy_addOrder</find>
+      <find>页面丢失</find>
+      <find>findUserByEmail</find>
+      <find>买书</find>
+      <find>404</find>
+      <find>save</find>
+      <find>../</find>
+      <find>adminAction</find>
+      <find>admin</find>
+      <find>客服</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>类</replace>
+      <replace>&quot;</replace>
+      <replace>#pageVar</replace>
+      <replace>number</replace>
+      <replace>${pageContext.request.contextPath}</replace>
+      <replace>${pageContext}</replace>
+      <replace>${pageContext.request}</replace>
+      <replace>zipCode</replace>
+      <replace>${pageContext.request.contextPath}/</replace>
+      <replace>admin_</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>H:\Tools\apache-tomcat-9.0.12\lib\servlet-api.jar</dir>
+    </dirStrings>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="G:\my_maven_local_repository" />
+        <option name="userSettingsFile" value="G:\dev\apache-maven-3.5.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZIMPATvtdOQF6Zjfb3V5dUswGO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="JPA.DatabaseSchemaImportDialog" value="558fa686-83a2-4473-925b-a77a63603154" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\Workspaces\IdeaProjects\second-hand bookshop\web\testSource" />
+      <recent name="H:\Workspaces\IdeaProjects\second-hand bookshop\web\WEB-INF\admin" />
+      <recent name="H:\Workspaces\IdeaProjects\second-hand bookshop\web" />
+      <recent name="H:\Workspaces\IdeaProjects\second-hand bookshop\source" />
+      <recent name="H:\Workspaces\IdeaProjects\second-hand bookshop\src\com\bookshop\user\entity" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\Workspaces\IdeaProjects\second-hand bookshop\web\img" />
+      <recent name="H:\Workspaces\IdeaProjects\second-hand bookshop\web\WEB-INF" />
+      <recent name="H:\Workspaces\IdeaProjects\second-hand bookshop\web\WEB-INF\lib" />
+      <recent name="H:\Workspaces\IdeaProjects\second-hand bookshop\web\user" />
+      <recent name="H:\Workspaces\IdeaProjects\second-hand bookshop\web" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.bookshop.user.entity" />
+      <recent name="com" />
+      <recent name="" />
+      <recent name="com.bookshop.entity" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.bookshop.admin.dao.impl" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.12">
+    <configuration name="SendMailTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bookshop.email.SendMailTest" />
+      <module name="second-hand bookshop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bookshop.email.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookAction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="second-hand bookshop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bookshop.admin.action.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bookshop.user.action" />
+      <option name="MAIN_CLASS_NAME" value="com.bookshop.user.action.BookAction" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookAction.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="second-hand bookshop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bookshop.admin.action.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bookshop.user.action" />
+      <option name="MAIN_CLASS_NAME" value="com.bookshop.user.action.BookAction" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookDAOImpl.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="second-hand bookshop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bookshop.user.dao.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bookshop.user.dao.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.bookshop.user.dao.impl.BookDAOImpl" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SendEmailAction.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="second-hand bookshop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bookshop.email.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bookshop.email" />
+      <option name="MAIN_CLASS_NAME" value="com.bookshop.email.SendEmailAction" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.12" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.12" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="H:\Java\jdk1.8.0_191\jre" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="second-hand bookshop:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/second_hand_bookshop_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_second-hand_bookshop" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="49910" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="second-hand bookshop:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.SendMailTest" />
+      <item itemvalue="JUnit.BookAction.test" />
+      <item itemvalue="JUnit.BookAction" />
+      <item itemvalue="JUnit.BookDAOImpl.test" />
+      <item itemvalue="JUnit.SendEmailAction.test" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.12" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SendEmailAction.test" />
+        <item itemvalue="JUnit.BookDAOImpl.test" />
+        <item itemvalue="JUnit.BookAction" />
+        <item itemvalue="JUnit.BookAction.test" />
+        <item itemvalue="Application.SendMailTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e406bf40-23b3-42ff-bebf-8ec5ead751f8" name="Default Changelist" comment="" />
+      <created>1557653962559</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1557653962559</updated>
+      <workItem from="1557653967334" duration="1866000" />
+      <workItem from="1557752100679" duration="51000" />
+      <workItem from="1558052862558" duration="7568000" />
+      <workItem from="1558091603642" duration="1736000" />
+      <workItem from="1558143793360" duration="14000" />
+      <workItem from="1558404203692" duration="21594000" />
+      <workItem from="1558435004002" duration="15557000" />
+      <workItem from="1558482767100" duration="416000" />
+      <workItem from="1558777413333" duration="6348000" />
+      <workItem from="1558826507269" duration="6849000" />
+      <workItem from="1558880065487" duration="968000" />
+      <workItem from="1558919447545" duration="802000" />
+      <workItem from="1558969348427" duration="3661000" />
+      <workItem from="1559009160457" duration="3018000" />
+      <workItem from="1559025928309" duration="8568000" />
+      <workItem from="1559056409386" duration="4000" />
+      <workItem from="1559058549565" duration="216000" />
+      <workItem from="1559087330546" duration="18244000" />
+      <workItem from="1559129371651" duration="17962000" />
+      <workItem from="1559178761285" duration="44651000" />
+      <workItem from="1559257040553" duration="24793000" />
+      <workItem from="1559344668597" duration="57535000" />
+      <workItem from="1559433493679" duration="1664000" />
+      <workItem from="1559435218610" duration="56399000" />
+      <workItem from="1559532301850" duration="35121000" />
+      <workItem from="1559606630212" duration="8378000" />
+      <workItem from="1559649682799" duration="104000" />
+      <workItem from="1559649814915" duration="413000" />
+      <workItem from="1559661016311" duration="6415000" />
+      <workItem from="1559699260187" duration="35985000" />
+      <workItem from="1559780060809" duration="12225000" />
+      <workItem from="1559870003830" duration="1055000" />
+      <workItem from="1559888754571" duration="33000" />
+      <workItem from="1560091379071" duration="5479000" />
+      <workItem from="1560144038332" duration="10000" />
+      <workItem from="1560145501751" duration="20000" />
+      <workItem from="1560176985072" duration="322000" />
+      <workItem from="1576379702373" duration="992000" />
+      <workItem from="1576384067136" duration="533000" />
+      <workItem from="1576391116590" duration="1590000" />
+      <workItem from="1576393731649" duration="614000" />
+      <workItem from="1576395100566" duration="2479000" />
+      <workItem from="1576508774880" duration="697000" />
+      <workItem from="1576558866450" duration="451000" />
+      <workItem from="1576837921192" duration="621000" />
+      <workItem from="1584522132009" duration="831000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="BookAction - 2019.06.02 at 16h 18m 54s.xml">
+      <configuration name="BookAction" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookAction - 2019.06.02 at 16h 19m 31s.xml">
+      <configuration name="BookAction" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookDAOImpl_test - 2019.06.02 at 21h 25m 47s.xml">
+      <configuration name="BookDAOImpl.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookDAOImpl_test - 2019.06.02 at 21h 26m 29s.xml">
+      <configuration name="BookDAOImpl.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookDAOImpl_test - 2019.06.02 at 21h 27m 09s.xml">
+      <configuration name="BookDAOImpl.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookDAOImpl_test - 2019.06.02 at 21h 28m 34s.xml">
+      <configuration name="BookDAOImpl.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SendEmailAction_test - 2019.06.04 at 23h 52m 05s.xml">
+      <configuration name="SendEmailAction.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SendEmailAction_test - 2019.06.04 at 23h 52m 34s.xml">
+      <configuration name="SendEmailAction.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SendEmailAction_test - 2019.06.04 at 23h 52m 48s.xml">
+      <configuration name="SendEmailAction.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SendEmailAction_test - 2019.06.04 at 23h 54m 04s.xml">
+      <configuration name="SendEmailAction.test" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="574" y="127" key="#com.intellij.ide.util.MemberChooser" timestamp="1584522266653">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="574" y="127" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1584522266653" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>second-hand bookshop:war exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Struts 2 (second-hand bookshop)|Struts 2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>junit-4.10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>second-hand bookshop</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Java EE 6-Java EE 6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

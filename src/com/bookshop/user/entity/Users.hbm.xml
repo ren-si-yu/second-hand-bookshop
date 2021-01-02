@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.bookshop.user.entity.Users" table="s_users" schema="second-hand bookshop">
+        <id name="userId">
+            <column name="userId"></column>
+            <generator class="native"></generator>
+        </id>
+        <property name="loginEmail" column="loginEmail" not-null="true" unique="true"/>
+        <property name="loginPwd" column="loginPwd" not-null="true"/>
+        <property name="createTime" column="createTime"/>
+        <property name="userName" column="userName"/>
+        <property name="userPhoto" column="userPhoto"/>
+        <property name="userPhone" column="userPhone"/>
+        <property name="CDKEY" column="CDKEY"></property>
+        <property name="status" column="status"></property>
+        <property name="money">
+            <column name="money" precision="11" scale="2"></column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,37 @@
+.Register{
+    width: 800px;
+    height: 500px;
+    background-color: gainsboro;
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    padding-top:20px;
+}
+
+
+div a{
+    text-decoration: none;
+}
+div a:link {
+    color:white;
+    text-decoration: none;
+}
+div a:visited {
+    color:white;
+    text-decoration: none;
+}
+div a:hover {
+    color:white;
+    text-decoration: none;
+}
+div a:active {
+    color:white;
+    text-decoration: none;
+}
+
+
+.big{
+    background-color: silver;
+    height: 100px
+}
+

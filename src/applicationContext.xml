@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+    <!--配置数据源-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+        <property name="jdbcUrl" value="jdbc:mysql:///second-hand bookshop"></property>
+        <property name="user" value="root"></property>
+        <property name="password" value="111111"></property>
+        <property name="minPoolSize" value="5"></property>
+        <property name="maxPoolSize" value="10"></property>
+    </bean>
+
+    <!--#########################################################################-->
+
+    <!--配置hibernate的sessionfactory-->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <!--配置数据源属性-->
+        <property name="dataSource">
+            <ref bean="dataSource"></ref>
+        </property>
+        <!--配置hibernate的基本属性-->
+        <property name="hibernateProperties">
+
+
+            <props>
+                <prop key="hibernate.dialect">
+                    org.hibernate.dialect.MySQLDialect
+                </prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+            </props>
+        </property>
+
+        <!--配置hibernate映射文件名的位置和名称-->
+        <property name="mappingResources">
+            <list>
+                <value>com/bookshop/user/entity/Users.hbm.xml</value>
+                <value>com/bookshop/user/entity/Category.hbm.xml</value>
+                <value>com/bookshop/user/entity/Categorysecond.hbm.xml</value>
+                <value>com/bookshop/user/entity/Seller.hbm.xml</value>
+                <value>com/bookshop/user/entity/Books.hbm.xml</value>
+                <value>com/bookshop/user/entity/Carts.hbm.xml</value>
+                <value>com/bookshop/user/entity/Withdraw.hbm.xml</value>
+                <value>com/bookshop/user/entity/Address.hbm.xml</value>
+                <value>com/bookshop/user/entity/Order.hbm.xml</value>
+                <value>com/bookshop/admin/entity/Admin.hbm.xml</value>
+            </list>
+        </property>
+    </bean>
+
+
+    <!-- 声明Hibernate事务管理器 -->
+    <bean id="transactionManager"
+          class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!-- 定义事务通知 -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <!--定义切面，并将事务通知和切面组合（定义哪些方法应用事务规则） -->
+    <aop:config proxy-target-class="true">
+        <!-- 对com.restaurant.service包下的所有类的所有方法都应用事务规则 -->
+        <aop:pointcut id="serviceMethods"
+                      expression="execution(* com.bookshop.user.service.*.*(..))"/>
+        <aop:pointcut id="adminMethods"
+                      expression="execution(* com.bookshop.admin.service.*.*(..))"/>
+        <!-- 将事务通知和切面组合 -->
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethods"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="adminMethods"/>
+
+    </aop:config>
+    <!--####################################################################################-->
+
+
+    <bean id="usersDAO" class="com.bookshop.user.dao.impl.UsersDAOImpl">
+        <!--为set sessionfactory方法注入sessionfactory对象-->
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="categoryDAO" class="com.bookshop.user.dao.impl.CategoryDAOImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="sellerDAO" class="com.bookshop.user.dao.impl.SellerDAOImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean name="bookDAO" class="com.bookshop.user.dao.impl.BookDAOImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean name="buyDAO" class="com.bookshop.user.dao.impl.BuyDAOImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean name="adminDAO" class="com.bookshop.admin.dao.impl.AdminDAOImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+
+    <bean id="usersService" class="com.bookshop.user.service.impl.UsersServiceImpl">
+        <property name="usersDAO" ref="usersDAO"></property>
+    </bean>
+    <bean id="categoryService" class="com.bookshop.user.service.impl.CategoryServiceImpl">
+        <property name="categoryDAO" ref="categoryDAO"></property>
+    </bean>
+    <bean id="sellerService" class="com.bookshop.user.service.impl.SellerServiceImpl">
+        <property name="sellerDAO" ref="sellerDAO"></property>
+    </bean>
+    <bean name="bookService" class="com.bookshop.user.service.impl.BookServiceImpl">
+        <property name="bookDAO" ref="bookDAO"></property>
+    </bean>
+    <bean name="buyService" class="com.bookshop.user.service.impl.BuyServiceImpl">
+        <property name="buyDAO" ref="buyDAO"></property>
+    </bean>
+    <bean name="adminService" class="com.bookshop.admin.service.impl.AdminServiceImpl">
+        <property name="adminDAO" ref="adminDAO"></property>
+    </bean>
+
+
+    <!--实例化useraction类，并为其中属性userservice注入值-->
+    <!--必须是多例的,为了保证每个用户都会创建一个实例-->
+
+    <!--发送邮箱验证码-->
+
+    <bean id="sendEmailAction" class="com.bookshop.email.SendEmailAction" scope="prototype">
+        <property name="usersService" ref="usersService"></property>
+    </bean>
+
+    <bean id="doAction" class="com.bookshop.user.action.DoAction" scope="prototype">
+        <property name="usersService" ref="usersService"></property>
+        <property name="sellerService" ref="sellerService"></property>
+        <property name="bookService" ref="bookService"></property>
+    </bean>
+
+    <!--获取一二级分类目录-->
+    <bean id="indexAction" class="com.bookshop.user.action.IndexAction" scope="prototype">
+        <property name="categoryService" ref="categoryService"></property>
+        <property name="usersService" ref="usersService"></property>
+    </bean>
+
+    <!--分页-->
+    <bean id="pageAction" class="com.bookshop.user.action.PageAction" scope="prototype">
+        <property name="bookService" ref="bookService"></property>
+    </bean>
+
+    <bean id="alterPwdAction" class="com.bookshop.user.action.AlterPwdAction" scope="prototype">
+        <property name="usersService" ref="usersService"></property>
+    </bean>
+
+    <bean id="sellerAction" class="com.bookshop.user.action.SellerAction" scope="prototype">
+        <property name="sellerService" ref="sellerService"></property>
+        <property name="categoryService" ref="categoryService"></property>
+        <property name="bookService" ref="bookService"></property>
+        <property name="buyService" ref="buyService"></property>
+    </bean>
+
+    <bean id="bookAction" class="com.bookshop.user.action.BookAction" scope="prototype">
+        <property name="bookService" ref="bookService"></property>
+        <property name="sellerService" ref="sellerService"></property>
+    </bean>
+    <bean id="buyAction" class="com.bookshop.user.action.BuyAction" scope="prototype">
+        <property name="bookService" ref="bookService"></property>
+        <property name="sellerService" ref="sellerService"></property>
+        <property name="usersService" ref="usersService"></property>
+        <property name="buyService" ref="buyService"></property>
+
+    </bean>
+    <bean name="addressAction" class="com.bookshop.user.action.AddressAction" scope="prototype">
+
+        <property name="usersService" ref="usersService"></property>
+        <property name="buyService" ref="buyService"></property>
+    </bean>
+
+    <bean id="adminAction" class="com.bookshop.admin.action.AdminAction" scope="prototype">
+
+        <property name="sellerService" ref="sellerService"></property>
+        <property name="buyService" ref="buyService"></property>
+        <property name="usersService" ref="usersService"></property>
+        <property name="bookService" ref="bookService"></property>
+        <property name="categoryService" ref="categoryService"></property>
+        <property name="adminService" ref="adminService"></property>
+    </bean>
+
+</beans>
